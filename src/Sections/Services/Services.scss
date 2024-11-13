@@ -1,0 +1,58 @@
+@use "../../GlobalStyles/breakPoints.scss" as *;
+.services {
+   &_content {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      & .service {
+         display: flex;
+         align-items: center;
+         gap: 22px;
+
+         @include bpMax(l) {
+            flex-direction: column;
+         }
+         &:nth-child(even) {
+            flex-direction: row-reverse;
+            @include bpMax(l) {
+               flex-direction: column;
+            }
+         }
+         &_image {
+            width: 600px;
+            height: 400px;
+            @include bpMax(l) {
+               width: 100%;
+            }
+            @include bpMax(m) {
+               height: 300px;
+            }
+
+            & img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+         &_text {
+            width: 30%;
+            @include bpMax(l) {
+               width: 70%;
+               text-align: center;
+            }
+            @include bpMax(m) {
+               width: 100%;
+            }
+            & h2 {
+               font-size: 22px;
+            }
+
+            & p {
+               color: rgb(99, 99, 99);
+               font-weight: 300;
+            }
+         }
+      }
+   }
+}

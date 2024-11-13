@@ -1,0 +1,15 @@
+@use "./GlobalStyles/breakPoints.scss" as *;
+.App {
+   position: relative;
+
+   & section.style {
+      margin: 100px 0;
+      padding: 0 64px;
+      scroll-margin-top: 100px;
+      @include bpMax(m) {
+         padding: 0 16px;
+         margin: 40px 0;
+         scroll-margin-top: 80px;
+      }
+   }
+}

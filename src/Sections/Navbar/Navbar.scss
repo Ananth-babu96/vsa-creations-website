@@ -1,0 +1,110 @@
+@use "../../GlobalStyles/breakPoints.scss" as *;
+
+.navbar {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding: 16px 32px;
+   position: fixed;
+   background: rgba(255, 255, 255, 0.9);
+
+   z-index: 9;
+   //margin-bottom: 32px;
+   @include bpMax(m) {
+      padding: 16px;
+      margin-bottom: 16px;
+   }
+
+   &_logo {
+      & img {
+         height: 52px;
+         @include bpMax(m) {
+            height: 42px;
+         }
+      }
+   }
+
+   &_desktop-menu {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      @include bpMax(m) {
+         display: none;
+      }
+
+      & li {
+         //font-size: 22px;
+         transition: color 0.1s ease-out;
+         cursor: pointer;
+
+         &:hover {
+            color: rgb(87, 87, 87);
+         }
+      }
+   }
+   & .mobile-menu-btn {
+      display: none;
+      height: 30px;
+      width: 30px;
+      position: relative;
+      @include bpMax(m) {
+         display: block;
+      }
+
+      & > div {
+         height: 1px;
+         width: 30px;
+         border-radius: 8px;
+         background: #000;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         transition: transform 0.5s, width 0.5s;
+         &:nth-child(1) {
+            transform: translate(-50%, -10px);
+         }
+
+         &:nth-child(3) {
+            transform: translate(-50%, 10px);
+         }
+      }
+      &.open {
+         & > div {
+            &:nth-child(1) {
+               transform: translate(-50%, -50%) rotate(-45deg);
+            }
+            &:nth-child(2) {
+               width: 0;
+            }
+            &:nth-child(3) {
+               transform: translate(-50%, -50%) rotate(45deg);
+            }
+         }
+      }
+   }
+   &_mobile-menu {
+      position: fixed;
+      bottom: -80px;
+      right: -50%;
+      // transform: translateX(100%);
+      background: rgba(255, 255, 255, 0.9);
+      height: 100vh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease-in-out;
+      gap: 22px;
+      &.show {
+         //transform: translateX(0);
+         right: 0;
+      }
+
+      & li {
+         list-style: none;
+      }
+   }
+}
