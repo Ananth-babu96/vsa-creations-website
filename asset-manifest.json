@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/vsa-creations-website/static/css/main.7998e1bc.css",
+    "main.css": "/vsa-creations-website/static/css/main.e6c2309b.css",
     "main.js": "/vsa-creations-website/static/js/main.abcfff04.js",
     "static/media/vsa-testi-1.jpg": "/vsa-creations-website/static/media/vsa-testi-1.2777e746fd21ed93070d.jpg",
     "static/media/desktop-bg-vsa.jpg": "/vsa-creations-website/static/media/desktop-bg-vsa.0f6db482949daae68d39.jpg",
@@ -35,11 +35,11 @@
     "static/media/img12.jpg": "/vsa-creations-website/static/media/img12.0c6761a6c02f6b526275.jpg",
     "static/media/colored-vsa.png": "/vsa-creations-website/static/media/colored-vsa.6bb539c86325cecce22f.png",
     "index.html": "/vsa-creations-website/index.html",
-    "main.7998e1bc.css.map": "/vsa-creations-website/static/css/main.7998e1bc.css.map",
+    "main.e6c2309b.css.map": "/vsa-creations-website/static/css/main.e6c2309b.css.map",
     "main.abcfff04.js.map": "/vsa-creations-website/static/js/main.abcfff04.js.map"
   },
   "entrypoints": [
-    "static/css/main.7998e1bc.css",
+    "static/css/main.e6c2309b.css",
     "static/js/main.abcfff04.js"
   ]
 }
