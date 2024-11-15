@@ -1,7 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Gallery.scss";
 import { FaTimes } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { TiZoomIn } from "react-icons/ti";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 //images import------------------------------------------------
 import img1 from "../../assets/gallery-images/img1.jpg";
 import img2 from "../../assets/gallery-images/img2.jpg";
@@ -25,34 +29,59 @@ import img19 from "../../assets/gallery-images/img19.jpg";
 import img20 from "../../assets/gallery-images/img20.jpg";
 import img21 from "../../assets/gallery-images/img21.jpg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Gallery = () => {
+   // useEffect(() => {
+   //    const items = document.querySelectorAll(".grid-item");
+   //    const observer = new IntersectionObserver((entries) => {
+   //       entries.forEach((entry) => {
+   //          if (entry.isIntersecting) {
+   //             const index = Array.from(items).indexOf(entry.target);
+
+   //          }
+   //       });
+   //    });
+   //    items.forEach((item) => {
+   //       observer.observe(item);
+   //    });
+   //    return () => {
+   //       items.forEach((item) => {
+   //          observer.unobserve(item);
+   //       });
+   //    };
+   // });
+
    const [imageOpen, setImageOpen] = useState(false);
    const [imageIndex, setImageIndex] = useState(0);
-   const images = [
-      img2,
-      img3,
-      img4,
-      img5,
-      img7,
-      img8,
-      img9,
-      img10,
-      img11,
-      img12,
-      img13,
-      img14,
-      img15,
-      img16,
-      img17,
-      img18,
-      img19,
-      img20,
-      img21,
-      img1,
-   ];
+   const [images, setImages] = useState([
+      { src: img2, intersecting: false },
+      { src: img3, intersecting: false },
+      { src: img4, intersecting: false },
+      { src: img5, intersecting: false },
+      { src: img7, intersecting: false },
+      { src: img8, intersecting: false },
+      { src: img9, intersecting: false },
+      { src: img10, intersecting: false },
+      { src: img11, intersecting: false },
+      { src: img12, intersecting: false },
+      { src: img13, intersecting: false },
+      { src: img14, intersecting: false },
+      { src: img15, intersecting: false },
+      { src: img16, intersecting: false },
+      { src: img17, intersecting: false },
+      { src: img18, intersecting: false },
+      { src: img19, intersecting: false },
+      { src: img20, intersecting: false },
+      { src: img21, intersecting: false },
+      { src: img1, intersecting: false },
+   ]);
+   useEffect(() => {
+      console.log(images);
+   }, [images]);
    const openImage = (index) => {
-      setImageOpen(true);
       setImageIndex(index);
+      setImageOpen(true);
    };
 
    return (
@@ -90,8 +119,14 @@ const Gallery = () => {
          <div className="gallery_view">
             {images.map((img, index) => {
                return (
-                  <div className="grid-item" onClick={() => openImage(index)}>
-                     <img src={img} alt="gallery image" />
+                  <div
+                     className={`grid-item _${index}`}
+                     onClick={() => openImage(index)}
+                  >
+                     <div className="image-overlay">
+                        <TiZoomIn />
+                     </div>
+                     <img src={img.src} alt="gallery image" />
                   </div>
                );
             })}

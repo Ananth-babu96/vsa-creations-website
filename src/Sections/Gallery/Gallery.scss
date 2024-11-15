@@ -11,6 +11,7 @@
       z-index: 10;
       display: flex;
       justify-content: center;
+      align-items: center;
       transform: scale(0);
       transition: transform 0.2s;
 
@@ -54,9 +55,11 @@
 
       & img {
          height: 100%;
-         // width: 100%;
-
          object-fit: cover;
+
+         @include bpMax(m) {
+            height: 80%;
+         }
       }
    }
    .gallery_view {
@@ -77,11 +80,43 @@
       & .grid-item {
          width: 100%;
          height: 100%;
+         cursor: pointer;
+         overflow: hidden;
+         position: relative;
+
+         & .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            //display: none;
+            transition: opacity 0.2s ease-in;
+            z-index: -1;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 32px;
+         }
+
+         &:hover .image-overlay {
+            z-index: 1;
+            opacity: 1;
+            //display: block;
+         }
+
+         &:hover img {
+            transform: scale(1.1);
+         }
 
          & img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.2s ease-in;
          }
       }
    }
