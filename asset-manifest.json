@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/vsa-creations-website/static/css/main.e6c2309b.css",
-    "main.js": "/vsa-creations-website/static/js/main.abcfff04.js",
+    "main.css": "/vsa-creations-website/static/css/main.10983be8.css",
+    "main.js": "/vsa-creations-website/static/js/main.8939ce69.js",
     "static/media/vsa-testi-1.jpg": "/vsa-creations-website/static/media/vsa-testi-1.2777e746fd21ed93070d.jpg",
     "static/media/desktop-bg-vsa.jpg": "/vsa-creations-website/static/media/desktop-bg-vsa.0f6db482949daae68d39.jpg",
     "static/media/mobile-bg-vsa.jpg": "/vsa-creations-website/static/media/mobile-bg-vsa.bd2432f9d624b388c365.jpg",
@@ -35,11 +35,11 @@
     "static/media/img12.jpg": "/vsa-creations-website/static/media/img12.0c6761a6c02f6b526275.jpg",
     "static/media/colored-vsa.png": "/vsa-creations-website/static/media/colored-vsa.6bb539c86325cecce22f.png",
     "index.html": "/vsa-creations-website/index.html",
-    "main.e6c2309b.css.map": "/vsa-creations-website/static/css/main.e6c2309b.css.map",
-    "main.abcfff04.js.map": "/vsa-creations-website/static/js/main.abcfff04.js.map"
+    "main.10983be8.css.map": "/vsa-creations-website/static/css/main.10983be8.css.map",
+    "main.8939ce69.js.map": "/vsa-creations-website/static/js/main.8939ce69.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c2309b.css",
-    "static/js/main.abcfff04.js"
+    "static/css/main.10983be8.css",
+    "static/js/main.8939ce69.js"
   ]
 }
