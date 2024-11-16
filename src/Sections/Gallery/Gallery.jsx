@@ -38,7 +38,11 @@ const Gallery = () => {
    //       entries.forEach((entry) => {
    //          if (entry.isIntersecting) {
    //             const index = Array.from(items).indexOf(entry.target);
-
+   //             setImages((prevImages) =>
+   //                prevImages.map((img, i) =>
+   //                   i === index ? { ...img, intersecting: true } : img
+   //                )
+   //             );
    //          }
    //       });
    //    });
@@ -51,6 +55,29 @@ const Gallery = () => {
    //       });
    //    };
    // });
+   useEffect(() => {
+      const items = document.querySelectorAll(".grid-item");
+      const observer = new IntersectionObserver((entries) => {
+         entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+               const index = Array.from(items).indexOf(entry.target);
+               setImages((prevImages) =>
+                  prevImages.map((img, i) =>
+                     i === index ? { ...img, intersecting: true } : img
+                  )
+               );
+            }
+         });
+      });
+
+      // Observe all items
+      items.forEach((item) => observer.observe(item));
+
+      // Cleanup observer on unmount
+      return () => {
+         observer.disconnect();
+      };
+   }, []);
 
    const [imageOpen, setImageOpen] = useState(false);
    const [imageIndex, setImageIndex] = useState(0);
@@ -111,7 +138,7 @@ const Gallery = () => {
             >
                <IoIosArrowForward />
             </button>
-            <img src={images[imageIndex]} alt="" />
+            <img src={images[imageIndex].src} alt="" />
          </div>
          <div className="section-title">
             <h2>Our Latest Works</h2>
@@ -120,7 +147,9 @@ const Gallery = () => {
             {images.map((img, index) => {
                return (
                   <div
-                     className={`grid-item _${index}`}
+                     className={`grid-item ${
+                        img.intersecting ? "intersecting" : ""
+                     }`}
                      onClick={() => openImage(index)}
                   >
                      <div className="image-overlay">

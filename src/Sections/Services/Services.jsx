@@ -3,6 +3,7 @@ import "./Services.scss";
 import img1 from "../../assets/services-images/service-img-1.jpg";
 import img2 from "../../assets/services-images/service-img-2.jpg";
 import img3 from "../../assets/services-images/service-img-3.jpg";
+import { MdCurrencyRupee } from "react-icons/md";
 const Services = () => {
    return (
       <div className="section services">
@@ -20,6 +21,16 @@ const Services = () => {
                      We capture the magic of your big day , preserving every
                      kiss, smile and joyous tear in stunning detail.
                   </p>
+                  <p className="price">
+                     price starting at{" "}
+                     <span>
+                        {" "}
+                        <span className="rupee-icon">
+                           <MdCurrencyRupee />
+                        </span>
+                        29,999
+                     </span>
+                  </p>
                </div>
             </div>
             <div className="service">
@@ -33,6 +44,16 @@ const Services = () => {
                      playful moments leading up to your big day in beautiful,
                      heartfelt detail
                   </p>
+                  <p className="price">
+                     price starting at{" "}
+                     <span>
+                        {" "}
+                        <span className="rupee-icon">
+                           <MdCurrencyRupee />
+                        </span>
+                        29,999
+                     </span>
+                  </p>
                </div>
             </div>
             <div className="service">
@@ -45,6 +66,16 @@ const Services = () => {
                      Cherish the anticipation and joy of motherhood with
                      beautiful, natural photoshoots that highlight this special
                      time.
+                  </p>
+                  <p className="price">
+                     price starting at{" "}
+                     <span>
+                        {" "}
+                        <span className="rupee-icon">
+                           <MdCurrencyRupee />
+                        </span>
+                        9,999
+                     </span>
                   </p>
                </div>
             </div>

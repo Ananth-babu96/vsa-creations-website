@@ -83,6 +83,15 @@
          cursor: pointer;
          overflow: hidden;
          position: relative;
+         opacity: 0;
+         transform: translateY(30px);
+         transition: opacity 0.3s ease-in, transform 0.3s ease-in;
+         transition-delay: 0.4s;
+
+         &.intersecting {
+            opacity: 1;
+            transform: translateY(0);
+         }
 
          & .image-overlay {
             position: absolute;

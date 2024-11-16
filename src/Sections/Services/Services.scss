@@ -51,6 +51,18 @@
             & p {
                color: rgb(99, 99, 99);
                font-weight: 300;
+
+               &.price {
+                  color: #000;
+                  font-size: 14px;
+                  & span {
+                     font-weight: 600;
+
+                     &.rupee-icon {
+                        font-size: 13px;
+                     }
+                  }
+               }
             }
          }
       }

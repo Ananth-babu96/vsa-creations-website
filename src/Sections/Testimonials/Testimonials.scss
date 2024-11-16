@@ -19,6 +19,8 @@
          & .testimonial {
             position: relative;
             width: fit-content;
+            transform: translateY(30px);
+            opacity: 0;
             & .text {
                height: 180px;
                width: 440px;
