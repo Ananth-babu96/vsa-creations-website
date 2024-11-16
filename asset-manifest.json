@@ -1,17 +1,16 @@
 {
   "files": {
-    "main.css": "/vsa-creations-website/static/css/main.18923dd5.css",
-    "main.js": "/vsa-creations-website/static/js/main.06df2fe2.js",
+    "main.css": "/vsa-creations-website/static/css/main.475a3cb2.css",
+    "main.js": "/vsa-creations-website/static/js/main.b18ffb9e.js",
     "static/media/vsa-testi-1.jpg": "/vsa-creations-website/static/media/vsa-testi-1.2777e746fd21ed93070d.jpg",
-    "static/media/desktop-bg-vsa.jpg": "/vsa-creations-website/static/media/desktop-bg-vsa.0f6db482949daae68d39.jpg",
-    "static/media/mobile-bg-vsa.jpg": "/vsa-creations-website/static/media/mobile-bg-vsa.bd2432f9d624b388c365.jpg",
-    "static/media/hero-bg.jpg": "/vsa-creations-website/static/media/hero-bg.f8205b50f1757d0b17a4.jpg",
+    "static/media/colored-home-bg-vsa.jpg": "/vsa-creations-website/static/media/colored-home-bg-vsa.7992d70311f290c6f0d7.jpg",
+    "static/media/colored-home-bg-vsa-desktop.jpg": "/vsa-creations-website/static/media/colored-home-bg-vsa-desktop.f8205b50f1757d0b17a4.jpg",
     "static/media/service-img-1.jpg": "/vsa-creations-website/static/media/service-img-1.f8205b50f1757d0b17a4.jpg",
     "static/media/img21.jpg": "/vsa-creations-website/static/media/img21.09c559eee8eb1de82f72.jpg",
     "static/media/img20.jpg": "/vsa-creations-website/static/media/img20.59f0e3555357c73b5bab.jpg",
     "static/media/img3.jpg": "/vsa-creations-website/static/media/img3.0bd4710f3994ccfb73dd.jpg",
-    "static/media/heo-img.jpg": "/vsa-creations-website/static/media/heo-img.ddaa2f61fa8836badbb0.jpg",
     "static/media/img2.jpg": "/vsa-creations-website/static/media/img2.6e7c1622fa6b00c4d1d1.jpg",
+    "static/media/vsa-client-cropped.png": "/vsa-creations-website/static/media/vsa-client-cropped.849e02c34df7ca8813ee.png",
     "static/media/img9.jpg": "/vsa-creations-website/static/media/img9.ae3f3b9b43516832073c.jpg",
     "static/media/img17.jpg": "/vsa-creations-website/static/media/img17.8a816e45773123dd69f3.jpg",
     "static/media/img11.jpg": "/vsa-creations-website/static/media/img11.5f596c2ccb9dfbd5735e.jpg",
@@ -33,13 +32,12 @@
     "static/media/img4.jpg": "/vsa-creations-website/static/media/img4.c0a67eb3cffc233bfe7b.jpg",
     "static/media/img19.jpg": "/vsa-creations-website/static/media/img19.0cc5919858fc90272d93.jpg",
     "static/media/img12.jpg": "/vsa-creations-website/static/media/img12.0c6761a6c02f6b526275.jpg",
-    "static/media/colored-vsa.png": "/vsa-creations-website/static/media/colored-vsa.6bb539c86325cecce22f.png",
     "index.html": "/vsa-creations-website/index.html",
-    "main.18923dd5.css.map": "/vsa-creations-website/static/css/main.18923dd5.css.map",
-    "main.06df2fe2.js.map": "/vsa-creations-website/static/js/main.06df2fe2.js.map"
+    "main.475a3cb2.css.map": "/vsa-creations-website/static/css/main.475a3cb2.css.map",
+    "main.b18ffb9e.js.map": "/vsa-creations-website/static/js/main.b18ffb9e.js.map"
   },
   "entrypoints": [
-    "static/css/main.18923dd5.css",
-    "static/js/main.06df2fe2.js"
+    "static/css/main.475a3cb2.css",
+    "static/js/main.b18ffb9e.js"
   ]
 }
