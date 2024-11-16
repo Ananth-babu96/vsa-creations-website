@@ -1,10 +1,72 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Services.scss";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import img1 from "../../assets/services-images/service-img-1.jpg";
 import img2 from "../../assets/services-images/service-img-2.jpg";
 import img3 from "../../assets/services-images/service-img-3.jpg";
 import { MdCurrencyRupee } from "react-icons/md";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const Services = () => {
+   const imgRef1 = useRef(null);
+   const imgRef2 = useRef(null);
+   const imgRef3 = useRef(null);
+   const textRef1 = useRef(null);
+   const textRef2 = useRef(null);
+   const textRef3 = useRef(null);
+   useGSAP(() => {
+      gsap.to(imgRef1.current, {
+         translateX: 0,
+         opacity: 1,
+         delay: 0.3,
+
+         scrollTrigger: {
+            trigger: imgRef1.current,
+         },
+      });
+      gsap.to(imgRef2.current, {
+         translateX: 0,
+         opacity: 1,
+         delay: 0.3,
+
+         scrollTrigger: {
+            trigger: imgRef2.current,
+         },
+      });
+      gsap.to(imgRef3.current, {
+         translateX: 0,
+         opacity: 1,
+         delay: 0.3,
+
+         scrollTrigger: {
+            trigger: imgRef3.current,
+         },
+      });
+      gsap.to(textRef1.current, {
+         opacity: 1,
+         delay: 0.3,
+         scrollTrigger: {
+            trigger: textRef1.current,
+         },
+      });
+      gsap.to(textRef2.current, {
+         opacity: 1,
+         delay: 0.3,
+         scrollTrigger: {
+            trigger: textRef2.current,
+         },
+      });
+      gsap.to(textRef3.current, {
+         opacity: 1,
+         delay: 0.3,
+         scrollTrigger: {
+            trigger: textRef3.current,
+         },
+      });
+   });
    return (
       <div className="section services">
          <div className="section-title">
@@ -12,10 +74,10 @@ const Services = () => {
          </div>
          <div className="services_content">
             <div className="service">
-               <div className="service_image">
+               <div className="service_image" ref={imgRef1}>
                   <img src={img1} alt="" />
                </div>
-               <div className="service_text">
+               <div className="service_text" ref={textRef1}>
                   <h2>Wedding Shoot</h2>
                   <p>
                      We capture the magic of your big day , preserving every
@@ -34,10 +96,10 @@ const Services = () => {
                </div>
             </div>
             <div className="service">
-               <div className="service_image">
+               <div className="service_image" ref={imgRef2}>
                   <img src={img2} alt="" />
                </div>
-               <div className="service_text">
+               <div className="service_text" ref={textRef2}>
                   <h2>Pre Wedding Shoot</h2>
                   <p>
                      We celebrate your love story, capturing the romantic and
@@ -51,16 +113,16 @@ const Services = () => {
                         <span className="rupee-icon">
                            <MdCurrencyRupee />
                         </span>
-                        29,999
+                        9,999
                      </span>
                   </p>
                </div>
             </div>
             <div className="service">
-               <div className="service_image">
+               <div className="service_image" ref={imgRef3}>
                   <img src={img3} alt="" />
                </div>
-               <div className="service_text">
+               <div className="service_text" ref={textRef3}>
                   <h2>Maternity and Baby Shoot</h2>
                   <p>
                      Cherish the anticipation and joy of motherhood with

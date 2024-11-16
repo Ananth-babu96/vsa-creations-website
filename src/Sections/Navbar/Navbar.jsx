@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
-import logo from "../../assets/logo/colored-vsa.png";
+import logo from "../../assets/logo/vsa-client-cropped.png";
 const Navbar = ({ aboutRef, galleryRef, servicesRef, contactRef }) => {
    const [menuOpen, setMenuOpen] = useState(false);
    const scrollTo = (reference) => {

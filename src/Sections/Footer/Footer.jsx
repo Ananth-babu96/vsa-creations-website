@@ -3,7 +3,7 @@ import "./Footer.scss";
 import { FaPhone, FaS, FaWhatsapp } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
-import logo from "../../assets/logo/colored-vsa.png";
+import logo from "../../assets/logo/vsa-client-cropped.png";
 const Footer = () => {
    const year = new Date().getFullYear();
    return (

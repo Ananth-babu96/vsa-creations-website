@@ -1,8 +1,8 @@
 @use "../../GlobalStyles/breakPoints.scss" as *;
 .hero {
    height: 100vh;
-   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url("../../assets/images/desktop-bg-vsa.jpg");
+   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("../../assets/images/colored-home-bg-vsa-desktop.jpg");
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
@@ -13,8 +13,8 @@
    color: #fff;
    padding: 32px;
    @include bpMax(s) {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-         url("../../assets/images/mobile-bg-vsa.jpg");
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+         url("../../assets/images/colored-home-bg-vsa.jpg");
       //background-position: -380px;
       background-position: center;
       background-size: cover;

@@ -1,7 +1,5 @@
 import React from "react";
 import "./Hero.scss";
-import image from "../../assets/images/heo-img.jpg";
-import background from "../../assets/images/hero-bg.jpg";
 import { FaPhone, FaS, FaWhatsapp } from "react-icons/fa6";
 import { AiFillInstagram } from "react-icons/ai";
 import { MdEmail } from "react-icons/md";
